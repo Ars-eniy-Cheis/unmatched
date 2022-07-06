@@ -5,9 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
+import {MainPage} from './pages/MainPage'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const app = (<App/>);
+const mainPage = (<MainPage/>);
 
 const router = (
 
@@ -15,8 +18,8 @@ const router = (
         <Router>
             <div>
                 <Routes>
-                    <Route path="/" element={app} />
-                    <Route path="/App" element={app} />
+                    <Route path="/" element={mainPage} />
+                    <Route path="/app" element={app} />
                     <Route path="*" element={app} />
                 </Routes>
             </div>
